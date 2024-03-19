@@ -2,7 +2,6 @@ include("building_tree.jl")
 include("utilities.jl")
 include("merge.jl")
 include("main_merge.jl")
-include("shift.jl")
 
 function main_iterative()
     for dataSetName in ["iris", "seeds", "wine", "dry_bean", "steel_industry"]
@@ -42,8 +41,7 @@ function main_iterative()
             testIterative(X_train, Y_train, X_test, Y_test, D, classes, time_limit = time_limit, isMultivariate = false, isExact=false, shiftSeparations=true)
             println("\t\t\t- Iterative exact (FeS)")
             testIterative(X_train, Y_train, X_test, Y_test, D, classes, time_limit = time_limit, isMultivariate = false, isExact=true)
-
-#            # Do not apply to the multivariate case in the project             
+            
 #            println("\t\tMultivarié")
 #            println("\t\t\t- Unsplittable clusters (FU)")
 #            testMerge(X_train, Y_train, X_test, Y_test, D, classes, time_limit = time_limit, isMultivariate = true)

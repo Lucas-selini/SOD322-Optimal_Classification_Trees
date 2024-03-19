@@ -3,12 +3,12 @@ include("utilities.jl")
 include("merge.jl")
 
 function main_merge()
-    for dataSetName in ["iris", "seeds", "wine"]
+    for dataSetName in ["iris", "seeds", "wine", "dry_bean", "steel_industry"]
         
         print("=== Dataset ", dataSetName)
         
         # Préparation des données
-        include("Documents/Ensta/3A/SOD322/project_decision_trees/data/" * dataSetName * ".txt")
+        include("./data/" * dataSetName * ".txt")
         
         # Ramener chaque caractéristique sur [0, 1]
         reducedX = Matrix{Float64}(X)
