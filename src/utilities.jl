@@ -8,7 +8,7 @@ Entrées :\n
     - p la proportion que représente le jeu de données test
 Sorties :\n
     - train, la liste des indices des données d'entrainement
-    - test, la liste des indices des données de tesr
+    - test, la liste des indices des données de test
 """
 function train_test_indexes(n::Int64,p::Float64=0.2)
 
@@ -64,7 +64,7 @@ end
 
 """
 Change l'échelle des caractéristiques d'un dataset pour les situer dans [0, 1]
-
+'
 Entrée :
 - X: les caractéristiques du dataset d'origine
 

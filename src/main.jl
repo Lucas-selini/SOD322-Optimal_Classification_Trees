@@ -4,13 +4,12 @@ include("utilities.jl")
 function main()
 
     # Pour chaque jeu de données
-    for dataSetName in ["steel_industry", "dry_bean", "iris", "seeds", "wine"
-        ]
+    for dataSetName in ["iris", "seeds", "wine"]
         
         print("=== Dataset ", dataSetName)
+
         # Préparation des données
-        #include("D:/Cours/3A/SOD 322 - Opt for Data Science/decision_tree_document/data/" * dataSetName * ".txt")
-        include("./data/" * dataSetName * ".txt")
+        include("Documents/Ensta/3A/SOD322/project_decision_trees/data/" * dataSetName * ".txt")
 
         # Ramener chaque caractéristique sur [0, 1]
         reducedX = Matrix{Float64}(X)
