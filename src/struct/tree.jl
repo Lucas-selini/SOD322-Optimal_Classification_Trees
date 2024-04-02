@@ -1,6 +1,5 @@
 using JuMP
 using CPLEX
-using LinearAlgebra
 
 include("cluster.jl")
 
@@ -10,12 +9,8 @@ Structure représentant un arbre de décision
 mutable struct Tree
 
     D::Int64 # Nombre maximal de séparations d'une branche (profondeur de l'arbre - 1)
-    # Coefficients a des règles de branchement (a.x < b)
-    # a[:, 1] correspond à la racine, and a[j, 1] to the value of coeffient a_j,1
-    # a[2*t] correspond au fils gauche de t
-    # a[2*t+1] correspond au fils droit de t
-    a::Matrix{Float64} 
-    b::Vector{Float64} # Idem pour b
+    a::Matrix{Float64} # Vecteurs caractérisant les règles de branchement (a.x < b)
+    b::Vector{Float64} # Idem
     c::Vector{Int64} # c[t] : classe du noeud d'indice t (-1 si aucune classe n'est attribuée)
     
     function Tree()
@@ -132,7 +127,7 @@ Entrées :
 Sortie :
 - this::Tree : un arbre
 """
-function Tree(D::Int64, a::Matrix{Float64}, c::Vector{Int64}, u::Matrix{Int64}, clusters::Vector{Cluster}; splittableClusters::Bool=false)
+function Tree(D::Int64, a::Matrix{Float64}, c::Vector{Int64}, u::Matrix{Int64}, clusters::Vector{Cluster})
 
     this = Tree()
     this.D = D
@@ -142,7 +137,7 @@ function Tree(D::Int64, a::Matrix{Float64}, c::Vector{Int64}, u::Matrix{Int64}, 
     sepCount = 2^D - 1
     leavesCount = 2^D
     dataCount = length(clusters)
-    featuresCount = size(clusters[1].x, 2)
+    featuresCount = length(clusters[1].lBounds)
     
     # Upper bound of b for each separation
     ub_b = ones(Float64, sepCount)
@@ -175,11 +170,11 @@ function Tree(D::Int64, a::Matrix{Float64}, c::Vector{Int64}, u::Matrix{Int64}, 
                 
                 # If the cluster goes to the left of at
                 if t % 2 == 0
-                    lb_b[a_t] = max(lb_b[a_t], sum(a[j, a_t]*clusters[i].barycenter[j] for j in 1:featuresCount))
+                    lb_b[a_t] = max(lb_b[a_t], sum(a[j, a_t]*clusters[i].uBounds[j] for j in 1:featuresCount))
 
                 # If the cluster goes to the right of at
                 else
-                    ub_b[a_t] = min(ub_b[a_t], sum(a[j, a_t]*clusters[i].barycenter[j] for j in 1:featuresCount))
+                    ub_b[a_t] = min(ub_b[a_t], sum(a[j, a_t]*clusters[i].lBounds[j] for j in 1:featuresCount))
                 end
                 t = a_t
             end
@@ -348,76 +343,4 @@ function Tree(D::Int64, c::Vector{Int64}, u::Matrix{Int64}, s_model::Matrix{Int6
     end
 
     return this
-end
-
-"""
-Returns the id of the leaf of tree T reached by data x
-"""
-function leafReached(x::Vector{Float64}, T::Tree)
-    currentNode = 1
-
-    while T.c[currentNode] == -1
-        if dot(T.a[:,currentNode], x) < T.b[currentNode]
-            currentNode = 2*currentNode
-        else
-            currentNode = 2*currentNode + 1
-        end 
-    end
-
-    return currentNode
-end
-
-"""
-Get the leaf reached by each element of a cluster
-"""
-function getLeavesReached(c::Cluster, T::Tree)
-    clusterSize = size(c.dataIds, 1)
-    leavesReached = Vector{Int}(undef, clusterSize)
-    
-    # For each data in the cluster
-    for (dataClusterId, dataId) in enumerate(c.dataIds)
-        leavesReached[dataClusterId] = leafReached(c.x[dataId, :], T)
-    end
-    
-    return leavesReached
-end
-
-"""
-Get a vector of clusters. Each cluster of this vector corresponds to the set of data in cluster c reaching the same leaf
-"""
-function getSplitClusters(c::Cluster, T::Tree)
-    leavesReached = getLeavesReached(c, T)
-
-    newClusters = Vector{Cluster}([])
-
-    for id in 1:length(leavesReached)
-
-        # If this node is not already in a new cluster
-        if leavesReached[id] != -1
-
-            # Get all the other nodes of the cluster reaching the same leaf
-            nodesInCurrentCluster = findall(leavesReached .== leavesReached[id])
-
-            newCluster = Cluster(c.dataIds[nodesInCurrentCluster], c.x, c.class)
-            push!(newClusters, newCluster)
-
-            # Ensure that the nodes are not considered in another cluster
-            leavesReached[nodesInCurrentCluster] .= -1
-            
-        end 
-    end
-
-    return newClusters
-end 
-
-"""
-Count the number of new clusters created if the cluster intersected by tree T are split
-"""
-function getClusterSplitCount(T::Tree, clusters::Vector)
-    newClustersCount = 0
-    for cluster in clusters
-        newClustersCount += length(getSplitClusters(cluster, T))
-    end
-
-    return newClustersCount - length(clusters)
 end

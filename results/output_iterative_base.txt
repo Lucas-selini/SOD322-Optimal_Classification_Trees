@@ -1,0 +1,530 @@
+=== Dataset iris (train size 120, test size 30, 4, features count: 4)
+        D = 2
+                Univarié
+                        - Unsplittable clusters (FU)
+                        Gamma           # clusters      Gap
+                        0.0%            3 clusters      0.0%    Erreurs train/test : 38/12      2.7s
+                        20.0%           24 clusters     0.0%    Erreurs train/test : 5/1        0.3s
+                        40.0%           48 clusters     0.0%    Erreurs train/test : 5/1        0.2s
+                        60.0%           72 clusters     0.0%    Erreurs train/test : 5/1        0.5s
+                        80.0%           96 clusters     0.0%    Erreurs train/test : 5/1        2.0s
+                        100.0%          120 clusters    0.0%    Erreurs train/test : 5/1        2.2s
+
+                        - Iterative heuristic (FhS)
+                        Gamma           # clusters      Gap
+                        0.0%            3 clusters      0.0%    Erreurs train/test : 5/1        2.5s    10 iterations
+                        20.0%           24 clusters     0.0%    Erreurs train/test : 5/1        2.2s    6 iterations
+                        40.0%           48 clusters     0.0%    Erreurs train/test : 5/1        1.4s    3 iterations
+                        60.0%           72 clusters     0.0%    Erreurs train/test : 5/1        3.3s    3 iterations
+                        80.0%           96 clusters     0.0%    Erreurs train/test : 5/1        1.7s    1 iterations
+
+                        - Iterative heuristic (FhS) with shifts
+                        Gamma           # clusters      Gap
+                        0.0%            3 clusters      0.0%    Erreurs train/test : 5/1        2.4s    10 iterations
+                        20.0%           24 clusters     0.0%    Erreurs train/test : 5/1        2.3s    6 iterations
+                        40.0%           48 clusters     0.0%    Erreurs train/test : 5/1        1.6s    3 iterations
+                        60.0%           72 clusters     0.0%    Erreurs train/test : 0/0        2.9s    3 iterations
+                        80.0%           96 clusters     0.0%    Erreurs train/test : 0/0        1.7s    1 iterations
+
+                        - Iterative exact (FeS)
+                        Gamma           # clusters      Gap
+                        0.0%            3 clusters      0.0%    Erreurs train/test : 5/1        11.5s   10 iterations
+                        20.0%           24 clusters     0.0%    Erreurs train/test : 5/1        7.2s    6 iterations
+                        40.0%           48 clusters     0.0%    Erreurs train/test : 5/1        5.5s    4 iterations
+                        60.0%           72 clusters     0.0%    Erreurs train/test : 5/1        6.0s    3 iterations
+                        80.0%           96 clusters     0.0%    Erreurs train/test : 6/1        2.1s    1 iterations
+
+        D = 3
+                Univarié
+                        - Unsplittable clusters (FU)
+                        Gamma           # clusters      Gap
+                        0.0%            3 clusters      0.0%    Erreurs train/test : 38/13      0.0s
+                        20.0%           24 clusters     0.0%    Erreurs train/test : 4/2        1.5s
+                        40.0%           48 clusters     0.0%    Erreurs train/test : 0/1        2.0s
+                        60.0%           72 clusters     0.0%    Erreurs train/test : 0/1        1.6s
+                        80.0%           96 clusters     0.0%    Erreurs train/test : 0/1        4.0s
+                        100.0%          120 clusters    0.0%    Erreurs train/test : 0/1        3.2s
+
+                        - Iterative heuristic (FhS)
+                        Gamma           # clusters      Gap
+                        0.0%            3 clusters      0.0%    Erreurs train/test : 0/4        20.8s   12 iterations
+                        20.0%           24 clusters     0.0%    Erreurs train/test : 0/1        10.6s   5 iterations
+                        40.0%           48 clusters     0.0%    Erreurs train/test : 0/4        11.2s   3 iterations
+                        60.0%           72 clusters     0.0%    Erreurs train/test : 0/4        5.3s    3 iterations
+                        80.0%           96 clusters     0.0%    Erreurs train/test : 0/3        3.5s    1 iterations
+
+                        - Iterative heuristic (FhS) with shifts
+                        Gamma           # clusters      Gap
+                        0.0%            3 clusters      0.0%    Erreurs train/test : 0/4        20.8s   12 iterations
+                        20.0%           24 clusters     0.0%    Erreurs train/test : 0/1        10.7s   5 iterations
+                        40.0%           48 clusters     0.0%    Erreurs train/test : 0/0        13.2s   3 iterations
+                        60.0%           72 clusters     0.0%    Erreurs train/test : 0/4        9.7s    3 iterations
+                        80.0%           96 clusters     0.0%    Erreurs train/test : 0/3        5.5s    1 iterations
+
+                        - Iterative exact (FeS)
+                        Gamma           # clusters      Gap
+                        0.0%            3 clusters      0.0%    Erreurs train/test : 0/1        15.8s   7 iterations
+                        20.0%           24 clusters     0.0%    Erreurs train/test : 0/1        22.4s   6 iterations
+                        40.0%           48 clusters     0.0%    Erreurs train/test : 0/4        13.1s   3 iterations
+                        60.0%           72 clusters     0.0%    Erreurs train/test : 0/1        11.0s   2 iterations
+                        80.0%           96 clusters     0.0%    Erreurs train/test : 0/1        13.8s   2 iterations
+
+        D = 4
+                Univarié
+                        - Unsplittable clusters (FU)
+                        Gamma           # clusters      Gap
+                        0.0%            3 clusters      0.0%    Erreurs train/test : 38/12      0.2s
+                        20.0%           24 clusters     0.0%    Erreurs train/test : 3/3        6.8s
+                        40.0%           48 clusters     0.0%    Erreurs train/test : 0/2        1.6s
+                        60.0%           72 clusters     0.0%    Erreurs train/test : 0/2        5.8s
+                        80.0%           96 clusters     0.0%    Erreurs train/test : 0/1        21.4s
+                        100.0%          120 clusters    0.0%    Erreurs train/test : 0/2        25.9s
+
+                        - Iterative heuristic (FhS)
+                        Gamma           # clusters      Gap
+                        0.0%            3 clusters      1.2e8%  Erreurs train/test : 76/24      30.1s   12 iterations
+                        20.0%           24 clusters     4.3%    Erreurs train/test : 5/2        30.3s   9 iterations
+                        40.0%           48 clusters     1.2e8%  Erreurs train/test : 76/24      30.1s   7 iterations
+                        60.0%           72 clusters     0.0%    Erreurs train/test : 0/1        19.8s   3 iterations
+                        80.0%           96 clusters     0.0%    Erreurs train/test : 0/1        15.1s   2 iterations
+
+                        - Iterative heuristic (FhS) with shifts
+                        Gamma           # clusters      Gap
+                        0.0%            3 clusters      0.0%    Erreurs train/test : 1/1        30.1s   14 iterations
+                        20.0%           24 clusters     0.0%    Erreurs train/test : 0/1        15.1s   10 iterations
+                        40.0%           48 clusters     0.0%    Erreurs train/test : 0/1        28.5s   7 iterations
+                        60.0%           72 clusters     0.0%    Erreurs train/test : 0/1        13.1s   3 iterations
+                        80.0%           96 clusters     0.0%    Erreurs train/test : 0/1        14.9s   2 iterations
+
+                        - Iterative exact (FeS)
+                        Gamma           # clusters      Gap
+                        0.0%            3 clusters      0.0%    Erreurs train/test : 0/1        12.7s   7 iterations
+                        20.0%           24 clusters     1.2e8%  Erreurs train/test : 76/24      29.8s   8 iterations
+                        40.0%           48 clusters     1.2e8%  Erreurs train/test : 76/24      29.8s   6 iterations
+                        60.0%           72 clusters     0.0%    Erreurs train/test : 0/1        16.9s   2 iterations
+                        80.0%           96 clusters     0.0%    Erreurs train/test : 0/1        7.2s    1 iterations
+
+=== Dataset seeds (train size 168, test size 42, 6, features count: 6)
+        D = 2
+                Univarié
+                        - Unsplittable clusters (FU)
+                        Gamma           # clusters      Gap
+                        0.0%            3 clusters      0.0%    Erreurs train/test : 55/19      0.0s
+                        20.0%           33 clusters     0.0%    Erreurs train/test : 22/5       0.2s
+                        40.0%           67 clusters     0.0%    Erreurs train/test : 15/3       0.4s
+                        60.0%           100 clusters    0.0%    Erreurs train/test : 11/3       1.2s
+                        80.0%           134 clusters    0.0%    Erreurs train/test : 11/3       6.8s
+                        100.0%          168 clusters    0.0%    Erreurs train/test : 10/2       9.8s
+
+                        - Iterative heuristic (FhS)
+                        Gamma           # clusters      Gap
+                        0.0%            3 clusters      0.0%    Erreurs train/test : 10/3       5.6s    11 iterations
+                        20.0%           33 clusters     0.0%    Erreurs train/test : 10/3       4.6s    8 iterations
+                        40.0%           67 clusters     0.0%    Erreurs train/test : 11/2       6.3s    5 iterations
+                        60.0%           100 clusters    0.0%    Erreurs train/test : 11/1       9.4s    3 iterations
+                        80.0%           134 clusters    0.0%    Erreurs train/test : 10/3       15.5s   2 iterations
+
+                        - Iterative heuristic (FhS) with shifts
+                        Gamma           # clusters      Gap
+                        0.0%            3 clusters      0.0%    Erreurs train/test : 10/3       5.5s    11 iterations
+                        20.0%           33 clusters     0.0%    Erreurs train/test : 10/3       4.4s    8 iterations
+                        40.0%           67 clusters     0.0%    Erreurs train/test : 11/2       6.3s    5 iterations
+                        60.0%           100 clusters    0.0%    Erreurs train/test : 0/0        9.8s    3 iterations
+                        80.0%           134 clusters    0.0%    Erreurs train/test : 10/3       15.0s   2 iterations
+
+                        - Iterative exact (FeS)
+                        Gamma           # clusters      Gap
+                        0.0%            3 clusters      7.4%    Erreurs train/test : 20/3       30.2s   10 iterations
+                        20.0%           33 clusters     1.68e8% Erreurs train/test : 115/25     29.8s   10 iterations
+                        40.0%           67 clusters     0.0%    Erreurs train/test : 10/2       24.5s   3 iterations
+                        60.0%           100 clusters    0.0%    Erreurs train/test : 10/3       25.5s   3 iterations
+                        80.0%           134 clusters    3.8%    Erreurs train/test : 10/2       30.0s   2 iterations
+
+        D = 3
+                Univarié
+                        - Unsplittable clusters (FU)
+                        Gamma           # clusters      Gap
+                        0.0%            3 clusters      0.0%    Erreurs train/test : 55/19      0.0s
+                        20.0%           33 clusters     0.0%    Erreurs train/test : 24/7       2.7s
+                        40.0%           67 clusters     0.0%    Erreurs train/test : 7/3        8.5s
+                        60.0%           100 clusters    3.0%    Erreurs train/test : 5/3        30.1s
+                        80.0%           134 clusters    3.7%    Erreurs train/test : 7/3        30.1s
+                        100.0%          168 clusters    6.3%    Erreurs train/test : 10/2       30.1s
+
+                        - Iterative heuristic (FhS)
+                        Gamma           # clusters      Gap
+                        0.0%            3 clusters      1.68e8% Erreurs train/test : 115/25     30.0s   9 iterations
+                        20.0%           33 clusters     1.68e8% Erreurs train/test : 115/25     29.8s   6 iterations
+                        40.0%           67 clusters     1.68e8% Erreurs train/test : 115/25     30.0s   4 iterations
+                        60.0%           100 clusters    2.4%    Erreurs train/test : 5/2        30.1s   1 iterations
+                        80.0%           134 clusters    4.3%    Erreurs train/test : 8/4        30.5s   1 iterations
+
+                        - Iterative heuristic (FhS) with shifts
+                        Gamma           # clusters      Gap
+                        0.0%            3 clusters      1.2%    Erreurs train/test : 0/0        30.2s   7 iterations
+                        20.0%           33 clusters     1.8%    Erreurs train/test : 0/0        30.0s   4 iterations
+                        40.0%           67 clusters     1.68e8% Erreurs train/test : 0/0        29.7s   4 iterations
+                        60.0%           100 clusters    2.4%    Erreurs train/test : 5/2        30.1s   1 iterations
+                        80.0%           134 clusters    4.3%    Erreurs train/test : 8/4        30.4s   1 iterations
+
+                        - Iterative exact (FeS)
+                        Gamma           # clusters      Gap
+                        0.0%            3 clusters      0.6%    Erreurs train/test : 24/4       30.0s   6 iterations
+                        20.0%           33 clusters     0.6%    Erreurs train/test : 21/5       30.3s   3 iterations
+                        40.0%           67 clusters     0.6%    Erreurs train/test : 6/2        30.1s   1 iterations
+                        60.0%           100 clusters    1.8%    Erreurs train/test : 10/1       30.1s   1 iterations
+                        80.0%           134 clusters    3.7%    Erreurs train/test : 9/3        30.2s   1 iterations
+
+        D = 4
+                Univarié
+                        - Unsplittable clusters (FU)
+                        Gamma           # clusters      Gap
+                        0.0%            3 clusters      0.0%    Erreurs train/test : 55/19      0.0s
+                        20.0%           33 clusters     0.0%    Erreurs train/test : 27/8       5.1s
+                        40.0%           67 clusters     6.3%    Erreurs train/test : 12/3       30.1s
+                        60.0%           100 clusters    3.7%    Erreurs train/test : 7/3        30.1s
+                        80.0%           134 clusters    5.7%    Erreurs train/test : 9/3        30.1s
+                        100.0%          168 clusters    3.1%    Erreurs train/test : 5/5        30.1s
+
+                        - Iterative heuristic (FhS)
+                        Gamma           # clusters      Gap
+                        0.0%            3 clusters      1.68e8% Erreurs train/test : 115/25     30.1s   7 iterations
+                        20.0%           33 clusters     1.68e8% Erreurs train/test : 115/25     30.0s   5 iterations
+                        40.0%           67 clusters     0.6%    Erreurs train/test : 15/5       30.3s   2 iterations
+                        60.0%           100 clusters    0.6%    Erreurs train/test : 4/5        30.2s   1 iterations
+                        80.0%           134 clusters    2.4%    Erreurs train/test : 4/3        30.2s   1 iterations
+
+                        - Iterative heuristic (FhS) with shifts
+                        Gamma           # clusters      Gap
+                        0.0%            3 clusters      12.0%   Erreurs train/test : 26/7       30.0s   6 iterations
+                        20.0%           33 clusters     1.2%    Erreurs train/test : 8/4        30.6s   3 iterations
+                        40.0%           67 clusters     1.68e8% Erreurs train/test : 0/0        30.1s   3 iterations
+                        60.0%           100 clusters    1.68e8% Erreurs train/test : 115/25     30.0s   3 iterations
+                        80.0%           134 clusters    2.4%    Erreurs train/test : 4/3        30.2s   1 iterations
+
+                        - Iterative exact (FeS)
+                        Gamma           # clusters      Gap
+                        0.0%            3 clusters      1.8%    Erreurs train/test : 11/4       30.2s   5 iterations
+                        20.0%           33 clusters     3.1%    Erreurs train/test : 24/7       30.6s   3 iterations
+                        40.0%           67 clusters     0.6%    Erreurs train/test : 18/7       30.2s   1 iterations
+                        60.0%           100 clusters    2.4%    Erreurs train/test : 11/3       30.3s   1 iterations
+                        80.0%           134 clusters    7.7%    Erreurs train/test : 12/3       30.3s   1 iterations
+
+=== Dataset wine (train size 142, test size 36, 13, features count: 13)
+        D = 2
+                Univarié
+                        - Unsplittable clusters (FU)
+                        Gamma           # clusters      Gap
+                        0.0%            3 clusters      0.0%    Erreurs train/test : 65/20      0.0s
+                        20.0%           28 clusters     0.0%    Erreurs train/test : 33/9       0.3s
+                        40.0%           56 clusters     0.0%    Erreurs train/test : 9/3        0.4s
+                        60.0%           85 clusters     0.0%    Erreurs train/test : 5/2        1.0s
+                        80.0%           113 clusters    0.0%    Erreurs train/test : 6/2        3.5s
+                        100.0%          142 clusters    0.0%    Erreurs train/test : 5/2        18.0s
+
+                        - Iterative heuristic (FhS)
+                        Gamma           # clusters      Gap
+                        0.0%            3 clusters      0.0%    Erreurs train/test : 5/2        10.0s   10 iterations
+                        20.0%           28 clusters     0.0%    Erreurs train/test : 5/2        12.2s   11 iterations
+                        40.0%           56 clusters     0.0%    Erreurs train/test : 5/2        15.5s   7 iterations
+                        60.0%           85 clusters     0.0%    Erreurs train/test : 5/2        15.1s   4 iterations
+                        80.0%           113 clusters    0.0%    Erreurs train/test : 5/2        21.9s   4 iterations
+
+                        - Iterative heuristic (FhS) with shifts
+                        Gamma           # clusters      Gap
+                        0.0%            3 clusters      0.0%    Erreurs train/test : 5/2        10.1s   10 iterations
+                        20.0%           28 clusters     0.0%    Erreurs train/test : 0/0        11.6s   11 iterations
+                        40.0%           56 clusters     0.0%    Erreurs train/test : 5/2        15.6s   7 iterations
+                        60.0%           85 clusters     0.0%    Erreurs train/test : 0/0        14.6s   4 iterations
+                        80.0%           113 clusters    0.0%    Erreurs train/test : 5/2        21.3s   4 iterations
+
+                        - Iterative exact (FeS)
+                        Gamma           # clusters      Gap
+                        0.0%            3 clusters      0.0%    Erreurs train/test : 5/2        29.0s   9 iterations
+                        20.0%           28 clusters     1.42e8% Erreurs train/test : 96/23      29.9s   10 iterations
+                        40.0%           56 clusters     6.0%    Erreurs train/test : 10/5       30.2s   6 iterations
+                        60.0%           85 clusters     1.42e8% Erreurs train/test : 96/23      29.8s   6 iterations
+                        80.0%           113 clusters    0.0%    Erreurs train/test : 5/2        27.8s   3 iterations
+
+        D = 3
+                Univarié
+                        - Unsplittable clusters (FU)
+                        Gamma           # clusters      Gap
+                        0.0%            3 clusters      0.0%    Erreurs train/test : 65/20      0.1s
+                        20.0%           28 clusters     0.0%    Erreurs train/test : 24/9       1.0s
+                        40.0%           56 clusters     0.0%    Erreurs train/test : 3/0        5.5s
+                        60.0%           85 clusters     0.0%    Erreurs train/test : 2/2        11.5s
+                        80.0%           113 clusters    0.0%    Erreurs train/test : 0/3        22.6s
+                        100.0%          142 clusters    2.2%    Erreurs train/test : 3/1        30.1s
+
+                        - Iterative heuristic (FhS)
+                        Gamma           # clusters      Gap
+                        0.0%            3 clusters      1.42e8% Erreurs train/test : 96/23      29.9s   10 iterations
+                        20.0%           28 clusters     0.0%    Erreurs train/test : 0/3        17.9s   6 iterations
+                        40.0%           56 clusters     ???%    Erreurs train/test : 6/5        30.0s   5 iterations
+Warning: there is no gap since when the time limit has been reached at the last iteration before CPLEX had found no feasible solution
+                        60.0%           85 clusters     1.42e8% Erreurs train/test : 96/23      29.7s   6 iterations
+                        80.0%           113 clusters    2.9%    Erreurs train/test : 8/2        30.4s   2 iterations
+
+                        - Iterative heuristic (FhS) with shifts
+                        Gamma           # clusters      Gap
+                        0.0%            3 clusters      1.4%    Erreurs train/test : 2/5        30.0s   8 iterations
+                        20.0%           28 clusters     0.0%    Erreurs train/test : 0/3        18.6s   6 iterations
+                        40.0%           56 clusters     1.42e8% Erreurs train/test : 0/0        29.9s   6 iterations
+                        60.0%           85 clusters     1.42e8% Erreurs train/test : 96/23      29.8s   6 iterations
+                        80.0%           113 clusters    2.9%    Erreurs train/test : 8/2        30.2s   2 iterations
+
+                        - Iterative exact (FeS)
+                        Gamma           # clusters      Gap
+                        0.0%            3 clusters      1.42e8% Erreurs train/test : 96/23      29.8s   9 iterations
+                        20.0%           28 clusters     1.42e8% Erreurs train/test : 96/23      29.8s   8 iterations
+                        40.0%           56 clusters     0.7%    Erreurs train/test : 6/5        30.4s   4 iterations
+                        60.0%           85 clusters     20.3%   Erreurs train/test : 36/11      30.1s   3 iterations
+                        80.0%           113 clusters    1.4%    Erreurs train/test : 5/0        30.3s   2 iterations
+
+        D = 4
+                Univarié
+                        - Unsplittable clusters (FU)
+                        Gamma           # clusters      Gap
+                        0.0%            3 clusters      0.0%    Erreurs train/test : 82/19      0.1s
+                        20.0%           28 clusters     0.0%    Erreurs train/test : 28/10      3.7s
+                        40.0%           56 clusters     0.0%    Erreurs train/test : 2/3        21.5s
+                        60.0%           85 clusters     0.0%    Erreurs train/test : 1/1        16.6s
+                        80.0%           113 clusters    0.0%    Erreurs train/test : 0/1        28.8s
+                        100.0%          142 clusters    5.2%    Erreurs train/test : 7/5        30.1s
+
+                        - Iterative heuristic (FhS)
+                        Gamma           # clusters      Gap
+                        0.0%            3 clusters      1.42e8% Erreurs train/test : 96/23      29.8s   10 iterations
+                        20.0%           28 clusters     2.2%    Erreurs train/test : 10/3       30.5s   6 iterations
+                        40.0%           56 clusters     1.42e8% Erreurs train/test : 96/23      30.0s   7 iterations
+                        60.0%           85 clusters     1.42e8% Erreurs train/test : 96/23      29.8s   4 iterations
+                        80.0%           113 clusters    1.4%    Erreurs train/test : 3/5        30.2s   1 iterations
+
+                        - Iterative heuristic (FhS) with shifts
+                        Gamma           # clusters      Gap
+                        0.0%            3 clusters      2.9%    Erreurs train/test : 4/7        30.2s   9 iterations
+                        20.0%           28 clusters     2.2%    Erreurs train/test : 10/3       30.3s   6 iterations
+                        40.0%           56 clusters     1.42e8% Erreurs train/test : 96/23      30.0s   6 iterations
+                        60.0%           85 clusters     0.0%    Erreurs train/test : 4/3        30.6s   2 iterations
+                        80.0%           113 clusters    1.4%    Erreurs train/test : 3/5        30.2s   1 iterations
+
+                        - Iterative exact (FeS)
+                        Gamma           # clusters      Gap
+                        0.0%            3 clusters      4.4%    Erreurs train/test : 17/8       30.4s   6 iterations
+                        20.0%           28 clusters     1.4%    Erreurs train/test : 12/7       30.1s   4 iterations
+                        40.0%           56 clusters     0.7%    Erreurs train/test : 8/6        30.2s   3 iterations
+                        60.0%           85 clusters     6.8%    Erreurs train/test : 16/6       30.2s   2 iterations
+                        80.0%           113 clusters    6.8%    Erreurs train/test : 6/4        30.2s   1 iterations
+
+=== Dataset dry_bean (train size 120, test size 30, 16, features count: 16)
+        D = 2
+                Univarié
+                        - Unsplittable clusters (FU)
+                        Gamma           # clusters      Gap
+                        0.0%            3 clusters      0.0%    Erreurs train/test : 76/24      0.0s
+                        20.0%           24 clusters     0.0%    Erreurs train/test : 18/5       0.3s
+                        40.0%           48 clusters     0.0%    Erreurs train/test : 12/4       0.8s
+                        60.0%           72 clusters     0.0%    Erreurs train/test : 12/3       4.8s
+                        80.0%           96 clusters     0.0%    Erreurs train/test : 10/4       26.0s
+                        100.0%          120 clusters    8.2%    Erreurs train/test : 10/4       30.0s
+
+                        - Iterative heuristic (FhS)
+                        Gamma           # clusters      Gap
+                        0.0%            3 clusters      10.1%   Erreurs train/test : 16/6       30.0s   10 iterations
+                        20.0%           24 clusters     8.1%    Erreurs train/test : 11/5       30.4s   8 iterations
+                        40.0%           48 clusters     0.0%    Erreurs train/test : 10/4       29.7s   5 iterations
+                        60.0%           72 clusters     3.2%    Erreurs train/test : 10/3       30.0s   3 iterations
+                        80.0%           96 clusters     0.0%    Erreurs train/test : 10/4       16.5s   1 iterations
+
+                        - Iterative heuristic (FhS) with shifts
+                        Gamma           # clusters      Gap
+                        0.0%            3 clusters      1.2e8%  Erreurs train/test : 76/24      30.0s   12 iterations
+                        20.0%           24 clusters     6.4%    Erreurs train/test : 0/0        30.3s   8 iterations
+                        40.0%           48 clusters     3.3%    Erreurs train/test : 0/0        30.4s   5 iterations
+                        60.0%           72 clusters     1.2e8%  Erreurs train/test : 76/24      30.0s   4 iterations
+                        80.0%           96 clusters     0.0%    Erreurs train/test : 0/0        17.2s   1 iterations
+
+                        - Iterative exact (FeS)
+                        Gamma           # clusters      Gap
+                        0.0%            3 clusters      1.2e8%  Erreurs train/test : 76/24      29.7s   8 iterations
+                        20.0%           24 clusters     3.1%    Erreurs train/test : 10/3       30.5s   4 iterations
+                        40.0%           48 clusters     10.1%   Erreurs train/test : 18/7       30.3s   3 iterations
+                        60.0%           72 clusters     5.1%    Erreurs train/test : 12/3       30.5s   2 iterations
+                        80.0%           96 clusters     6.2%    Erreurs train/test : 10/3       30.1s   1 iterations
+
+        D = 3
+                Univarié
+                        - Unsplittable clusters (FU)
+                        Gamma           # clusters      Gap
+                        0.0%            3 clusters      0.0%    Erreurs train/test : 76/24      0.0s
+                        20.0%           24 clusters     0.0%    Erreurs train/test : 27/7       2.5s
+                        40.0%           48 clusters     0.0%    Erreurs train/test : 6/6        15.8s
+                        60.0%           72 clusters     2.6%    Erreurs train/test : 6/3        30.0s
+                        80.0%           96 clusters     5.3%    Erreurs train/test : 6/4        30.2s
+                        100.0%          120 clusters    5.3%    Erreurs train/test : 6/3        30.1s
+
+                        - Iterative heuristic (FhS)
+                        Gamma           # clusters      Gap
+                        0.0%            3 clusters      3.4%    Erreurs train/test : 6/7        30.2s   5 iterations
+                        20.0%           24 clusters     1.2e8%  Erreurs train/test : 76/24      30.0s   4 iterations
+                        40.0%           48 clusters     1.2e8%  Erreurs train/test : 76/24      29.6s   3 iterations
+                        60.0%           72 clusters     4.3%    Erreurs train/test : 9/3        30.1s   1 iterations
+                        80.0%           96 clusters     3.4%    Erreurs train/test : 6/6        30.2s   1 iterations
+
+                        - Iterative heuristic (FhS) with shifts
+                        Gamma           # clusters      Gap
+                        0.0%            3 clusters      3.4%    Erreurs train/test : 6/7        30.3s   5 iterations
+                        20.0%           24 clusters     1.2e8%  Erreurs train/test : 76/24      29.8s   4 iterations
+                        40.0%           48 clusters     1.2e8%  Erreurs train/test : 76/24      29.6s   3 iterations
+                        60.0%           72 clusters     4.3%    Erreurs train/test : 0/0        30.0s   1 iterations
+                        80.0%           96 clusters     3.4%    Erreurs train/test : 6/6        30.2s   1 iterations
+
+                        - Iterative exact (FeS)
+                        Gamma           # clusters      Gap
+                        0.0%            3 clusters      2.6%    Erreurs train/test : 17/8       30.1s   6 iterations
+                        20.0%           24 clusters     3.4%    Erreurs train/test : 10/9       30.6s   4 iterations
+                        40.0%           48 clusters     5.3%    Erreurs train/test : 17/6       30.4s   2 iterations
+                        60.0%           72 clusters     1.7%    Erreurs train/test : 9/3        30.3s   1 iterations
+                        80.0%           96 clusters     8.1%    Erreurs train/test : 13/6       30.1s   1 iterations
+
+        D = 4
+                Univarié
+                        - Unsplittable clusters (FU)
+                        Gamma           # clusters      Gap
+                        0.0%            3 clusters      0.0%    Erreurs train/test : 76/24      0.0s
+                        20.0%           24 clusters     0.0%    Erreurs train/test : 19/6       10.3s
+                        40.0%           48 clusters     0.0%    Erreurs train/test : 7/7        7.5s
+                        60.0%           72 clusters     0.0%    Erreurs train/test : 4/10       19.5s
+                        80.0%           96 clusters     10.1%   Erreurs train/test : 11/4       30.1s
+                        100.0%          120 clusters    9.1%    Erreurs train/test : 10/3       30.1s
+
+                        - Iterative heuristic (FhS)
+                        Gamma           # clusters      Gap
+                        0.0%            3 clusters      1.2e8%  Erreurs train/test : 76/24      30.0s   6 iterations
+                        20.0%           24 clusters     0.8%    Erreurs train/test : 12/8       30.4s   4 iterations
+                        40.0%           48 clusters     1.2e8%  Erreurs train/test : 76/24      29.9s   5 iterations
+                        60.0%           72 clusters     1.2e8%  Erreurs train/test : 76/24      30.0s   3 iterations
+                        80.0%           96 clusters     2.6%    Erreurs train/test : 6/5        30.2s   1 iterations
+
+                        - Iterative heuristic (FhS) with shifts
+                        Gamma           # clusters      Gap
+                        0.0%            3 clusters      1.7%    Erreurs train/test : 11/6       30.5s   5 iterations
+                        20.0%           24 clusters     1.2e8%  Erreurs train/test : 76/24      30.2s   5 iterations
+                        40.0%           48 clusters     4.3%    Erreurs train/test : 10/4       30.2s   3 iterations
+                        60.0%           72 clusters     3.4%    Erreurs train/test : 0/0        30.5s   2 iterations
+                        80.0%           96 clusters     2.6%    Erreurs train/test : 6/5        30.2s   1 iterations
+
+                        - Iterative exact (FeS)
+                        Gamma           # clusters      Gap
+                        0.0%            3 clusters      1.2e8%  Erreurs train/test : 76/24      30.4s   6 iterations
+                        20.0%           24 clusters     5.3%    Erreurs train/test : 14/6       30.3s   3 iterations
+                        40.0%           48 clusters     5.3%    Erreurs train/test : 14/5       30.2s   2 iterations
+                        60.0%           72 clusters     15.4%   Erreurs train/test : 18/6       30.2s   2 iterations
+                        80.0%           96 clusters     2.6%    Erreurs train/test : 8/6        30.4s   1 iterations
+
+=== Dataset steel_industry (train size 120, test size 30, 7, features count: 7)
+        D = 2
+                Univarié
+                        - Unsplittable clusters (FU)
+                        Gamma           # clusters      Gap
+                        0.0%            3 clusters      0.0%    Erreurs train/test : 76/24      0.0s
+                        20.0%           24 clusters     0.0%    Erreurs train/test : 40/10      0.6s
+                        40.0%           48 clusters     0.0%    Erreurs train/test : 27/8       4.4s
+                        60.0%           72 clusters     0.0%    Erreurs train/test : 27/9       16.2s
+                        80.0%           96 clusters     8.5%    Erreurs train/test : 27/8       30.1s
+                        100.0%          120 clusters    22.9%   Erreurs train/test : 27/8       30.0s
+
+                        - Iterative heuristic (FhS)
+                        Gamma           # clusters      Gap
+                        0.0%            3 clusters      1.2e8%  Erreurs train/test : 76/24      29.8s   11 iterations
+                        20.0%           24 clusters     1.2e8%  Erreurs train/test : 76/24      30.0s   8 iterations
+                        40.0%           48 clusters     1.2e8%  Erreurs train/test : 76/24      30.0s   5 iterations
+                        60.0%           72 clusters     0.0%    Erreurs train/test : 27/9       10.4s   1 iterations
+                        80.0%           96 clusters     10.7%   Erreurs train/test : 27/8       30.1s   1 iterations
+
+                        - Iterative heuristic (FhS) with shifts
+                        Gamma           # clusters      Gap
+                        0.0%            3 clusters      10.0%   Erreurs train/test : 28/8       30.1s   9 iterations
+                        20.0%           24 clusters     5.5%    Erreurs train/test : 0/0        30.3s   6 iterations
+                        40.0%           48 clusters     1.2e8%  Erreurs train/test : 76/24      29.7s   6 iterations
+                        60.0%           72 clusters     0.0%    Erreurs train/test : 27/9       10.2s   1 iterations
+                        80.0%           96 clusters     10.6%   Erreurs train/test : 27/8       30.1s   1 iterations
+
+                        - Iterative exact (FeS)
+                        Gamma           # clusters      Gap
+                        0.0%            3 clusters      1.2e8%  Erreurs train/test : 76/24      29.7s   7 iterations
+                        20.0%           24 clusters     19.9%   Erreurs train/test : 43/11      30.1s   4 iterations
+                        40.0%           48 clusters     19.1%   Erreurs train/test : 53/15      30.2s   2 iterations
+                        60.0%           72 clusters     18.7%   Erreurs train/test : 60/12      30.0s   1 iterations
+                        80.0%           96 clusters     18.0%   Erreurs train/test : 27/8       30.2s   1 iterations
+
+        D = 3
+                Univarié
+                        - Unsplittable clusters (FU)
+                        Gamma           # clusters      Gap
+                        0.0%            3 clusters      0.0%    Erreurs train/test : 76/24      0.0s
+                        20.0%           24 clusters     0.0%    Erreurs train/test : 26/8       3.1s
+                        40.0%           48 clusters     17.5%   Erreurs train/test : 23/8       30.1s
+                        60.0%           72 clusters     15.4%   Erreurs train/test : 16/9       30.1s
+                        80.0%           96 clusters     23.7%   Erreurs train/test : 23/10      30.1s
+                        100.0%          120 clusters    27.7%   Erreurs train/test : 26/8       30.1s
+
+                        - Iterative heuristic (FhS)
+                        Gamma           # clusters      Gap
+                        0.0%            3 clusters      1.8%    Erreurs train/test : 34/8       30.4s   4 iterations
+                        20.0%           24 clusters     6.5%    Erreurs train/test : 44/12      30.5s   2 iterations
+                        40.0%           48 clusters     12.1%   Erreurs train/test : 36/10      30.0s   1 iterations
+                        60.0%           72 clusters     18.8%   Erreurs train/test : 19/9       30.2s   1 iterations
+                        80.0%           96 clusters     21.2%   Erreurs train/test : 21/7       30.1s   1 iterations
+
+                        - Iterative heuristic (FhS) with shifts
+                        Gamma           # clusters      Gap
+                        0.0%            3 clusters      20.0%   Erreurs train/test : 0/0        30.4s   5 iterations
+                        20.0%           24 clusters     1.2e8%  Erreurs train/test : 0/0        30.0s   4 iterations
+                        40.0%           48 clusters     11.1%   Erreurs train/test : 34/10      30.1s   1 iterations
+                        60.0%           72 clusters     18.8%   Erreurs train/test : 19/9       30.1s   1 iterations
+                        80.0%           96 clusters     21.2%   Erreurs train/test : 21/7       30.2s   1 iterations
+
+                        - Iterative exact (FeS)
+                        Gamma           # clusters      Gap
+                        0.0%            3 clusters      2.6%    Erreurs train/test : 36/13      30.1s   4 iterations
+                        20.0%           24 clusters     1.2e8%  Erreurs train/test : 76/24      29.9s   4 iterations
+                        40.0%           48 clusters     9.1%    Erreurs train/test : 49/14      30.0s   1 iterations
+                        60.0%           72 clusters     17.6%   Erreurs train/test : 21/10      30.1s   1 iterations
+                        80.0%           96 clusters     15.4%   Erreurs train/test : 16/7       30.1s   1 iterations
+
+        D = 4
+                Univarié
+                        - Unsplittable clusters (FU)
+                        Gamma           # clusters      Gap
+                        0.0%            3 clusters      0.0%    Erreurs train/test : 76/24      0.0s
+                        20.0%           24 clusters     0.0%    Erreurs train/test : 30/8       27.6s
+                        40.0%           48 clusters     16.5%   Erreurs train/test : 15/8       30.1s
+                        60.0%           72 clusters     9.1%    Erreurs train/test : 10/8       31.0s
+                        80.0%           96 clusters     10.1%   Erreurs train/test : 10/7       30.5s
+                        100.0%          120 clusters    20.0%   Erreurs train/test : 20/10      30.1s
+
+                        - Iterative heuristic (FhS)
+                        Gamma           # clusters      Gap
+                        0.0%            3 clusters      11.1%   Erreurs train/test : 17/8       30.1s   5 iterations
+                        20.0%           24 clusters     20.0%   Erreurs train/test : 33/8       30.4s   3 iterations
+                        40.0%           48 clusters     5.3%    Erreurs train/test : 25/12      30.1s   1 iterations
+                        60.0%           72 clusters     15.4%   Erreurs train/test : 18/8       30.1s   1 iterations
+                        80.0%           96 clusters     25.0%   Erreurs train/test : 24/11      30.2s   1 iterations
+
+                        - Iterative heuristic (FhS) with shifts
+                        Gamma           # clusters      Gap
+                        0.0%            3 clusters      8.1%    Erreurs train/test : 19/9       30.0s   5 iterations
+                        20.0%           24 clusters     20.0%   Erreurs train/test : 33/8       30.0s   3 iterations
+                        40.0%           48 clusters     5.3%    Erreurs train/test : 25/12      30.1s   1 iterations
+                        60.0%           72 clusters     15.4%   Erreurs train/test : 0/0        30.1s   1 iterations
+                        80.0%           96 clusters     26.3%   Erreurs train/test : 24/12      30.2s   1 iterations
+
+                        - Iterative exact (FeS)
+                        Gamma           # clusters      Gap
+                        0.0%            3 clusters      1.2e8%  Erreurs train/test : 76/24      30.0s   8 iterations
+                        20.0%           24 clusters     1.2e8%  Erreurs train/test : 76/24      29.8s   5 iterations
+                        40.0%           48 clusters     4.3%    Erreurs train/test : 29/11      30.1s   1 iterations
+                        60.0%           72 clusters     14.3%   Erreurs train/test : 38/9       30.2s   1 iterations
+                        80.0%           96 clusters     14.3%   Erreurs train/test : 18/12      30.1s   1 iterations

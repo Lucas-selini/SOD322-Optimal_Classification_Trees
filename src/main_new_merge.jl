@@ -6,7 +6,6 @@ using ClusterAnalysis
 using Clustering
 using GaussianMixtures
 using DataFrames
-# using ClusterAnalysis.GMM
 
 function main_merge()
     # for dataSetName in ["iris", "seeds", "wine", "dry_bean", "steel_industry"]
@@ -52,7 +51,7 @@ function testMerge(X_train, Y_train, X_test, Y_test, D, classes; time_limit::Int
     println("\t\t\tGamma\t\t# clusters\tGap")
     for gamma in 0:0.2:1
         print("\t\t\t", gamma * 100, "%\t\t")
-        clusters = newClusteringMethod(X_train, Y_train, gamma) # Replace simpleMerge with newClusteringMethod
+        clusters = newClusteringMethod(X_train, Y_train) # Replace simpleMerge with newClusteringMethod
         print(length(clusters), " clusters\t")
         T, obj, resolution_time, gap = build_tree(clusters, D, classes, multivariate = isMultivariate, time_limit = time_limit)
         print(round(gap, digits = 1), "%\t") 

@@ -1,4 +1,9 @@
 include("struct/distance.jl")
+include("struct/cluster.jl")
+using ClusterAnalysis
+using Clustering
+using GaussianMixtures
+using DataFrames
 
 """
 Essaie de regrouper des données en commençant par celles qui sont les plus proches.
@@ -113,10 +118,8 @@ function simpleMerge(x, y, gamma)
     # Pour chaque couple de données de même classe
     for id1 in 1:n-1
         for id2 in id1+1:n
-            if y[id1] == y[id2]
-                # Ajoute leur distance
-                push!(distances, Distance(id1, id2, x))
-            end
+            # Ajoute leur distance
+            push!(distances, Distance(id1, id2, x))
         end
     end
 
@@ -240,4 +243,67 @@ function merge!(c1::Cluster, c2::Cluster)
     c1.x = vcat(c1.x, c2.x)
     c1.lBounds = min.(c1.lBounds, c2.lBounds)
     c1.uBounds = max.(c1.uBounds, c2.uBounds)    
+end
+
+
+"""
+Regroupe des données en commençant grâce à un modèle de mélange gaussien
+
+Entrées :
+- X_train : caractéristiques des données
+- Y_train : classe des données
+
+Sorties :
+- un tableau de Cluster constituant une partition de x
+"""
+function newClusteringMethod(X_train,Y_train)
+    # check if X_train is a DataFrame
+    if typeof(X_train) != DataFrame
+        X_train_df = DataFrame(X_train, :auto)
+    else
+        X_train_df = X_train
+    end
+
+    # create GMM clustering object
+    gmm = GMM(3, size(X_train_df, 2),kind=:diag)
+
+    # fit the model
+    em!(gmm, Matrix(X_train_df), nIter=100, varfloor=1e-6) #em!(gmm, DataOrMatrix(X_train_df), nIter=100, varfloor=1e-6)
+
+    # get the labels
+    posterior_probs, _ = gmmposterior(gmm, Matrix(X_train_df))
+    labels = mapslices(argmax, posterior_probs, dims=2)
+
+    # get the number of clusters
+    n_clusters = length(unique(labels))
+
+    # create clusters
+    clusters = Vector{Cluster}(undef, n_clusters)
+
+    # fill the clusters
+    for i in 1:length(labels)
+        if !isassigned(clusters, labels[i])
+            if size(X_train_df[i,:], 1) > 1
+                clusters[labels[i]] = Cluster(i, reshape(Vector(X_train_df[i,:]), 1, :), Y_train)
+            else
+                clusters[labels[i]] = Cluster(i, Vector(X_train_df[i,:]), Y_train)
+            end
+        end
+        if size(X_train[i,:], 1) > 1
+            push!(clusters[labels[i]].dataIds, i)
+            push!(clusters[labels[i]].lBounds, minimum(X_train[i,:]))
+            push!(clusters[labels[i]].uBounds, maximum(X_train[i,:]))
+        else
+            push!(clusters[labels[i]].dataIds, i)
+            push!(clusters[labels[i]].lBounds, X_train[i])
+            push!(clusters[labels[i]].uBounds, X_train[i])
+        end
+    end
+    
+    # update the bounds
+    for i in 1:n_clusters
+        clusters[i].lBounds = minimum(clusters[i].lBounds, dims=1)
+        clusters[i].uBounds = maximum(clusters[i].uBounds, dims=1)
+    end
+    return clusters
 end

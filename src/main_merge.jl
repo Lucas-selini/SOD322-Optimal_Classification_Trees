@@ -3,7 +3,7 @@ include("utilities.jl")
 include("merge.jl")
 
 function main_merge()
-    for dataSetName in ["iris", "seeds", "wine", "dry_bean", "steel_industry"]
+    for dataSetName in ["iris", "seeds", "wine","dry_bean","steel_industry"]
         
         print("=== Dataset ", dataSetName)
         
